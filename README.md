@@ -1,4 +1,3 @@
-# BrightCoffee_Analysis
 # Bright Coffee Shop — Sales EDA & Dashboard
 
 A Databricks notebook that cleans, explores, and visualizes the Bright Coffee Shop transaction
@@ -11,6 +10,23 @@ dashboard-ready charts plus a short auto-generated business summary.
 |---|---|
 | `BrightCoffee_EDA_Dashboard.py` | Databricks notebook (source format) — import directly into a Databricks workspace |
 | `Bright_Coffee_Shop_Sales.csv` | Raw source data |
+| `charts/mind_map.png` | Mind map of the project structure (data prep → analysis → dashboard → deliverables) |
+| `charts/gantt_chart.png` | Illustrative 6-week project timeline |
+
+## Project overview
+
+![Mind map of the Bright Coffee analysis project](charts/mind_map.png)
+
+The project breaks into four phases: **data prep** (load, clean, feature engineer), **exploratory
+analysis** (descriptive stats, category/product/time breakdowns), **dashboard build** (KPIs,
+trend charts, pin-to-dashboard), and **deliverables** (insights write-up, slide-ready charts,
+this README).
+
+## Suggested timeline
+
+![Gantt chart of a 6-week project timeline](charts/gantt_chart.png)
+
+This is an illustrative plan, not tied to real dates — adjust the weeks to your actual schedule.
 
 ## What the notebook does
 
