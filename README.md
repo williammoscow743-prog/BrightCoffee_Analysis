@@ -1,97 +1,205 @@
-# Bright Coffee Shop — Sales EDA & Dashboard
+# Bright_Coffee_EDA
+Python_Fundamental_Pandas EDA Exercise 
+# ☕ Bright Coffee Sales Analysis
 
-A Databricks notebook that cleans, explores, and visualizes the Bright Coffee Shop transaction
-data (Jan–Jun 2023, ~149K transactions across 3 NYC store locations), and builds a set of
-dashboard-ready charts plus a short auto-generated business summary.
+> Turning raw coffee shop sales data into actionable business insights through Exploratory Data Analysis (EDA).
 
-## Files
+## 📖 Overview
 
-| File | Description |
-|---|---|
-| `BrightCoffee_EDA_Dashboard.py` | Databricks notebook (source format) — import directly into a Databricks workspace |
-| `Bright_Coffee_Shop_Sales.csv` | Raw source data |
-| `charts/mind_map.png` | Mind map of the project structure (data prep → analysis → dashboard → deliverables) |
-| `charts/gantt_chart.png` | Illustrative 6-week project timeline |
+Bright Coffee Sales Analysis is a data analytics project focused on exploring and understanding coffee shop sales data using Python. The project demonstrates the complete Exploratory Data Analysis (EDA) process, from data inspection and cleaning to visualization and business insight generation.
 
-## Project overview
+The goal is to uncover trends that can help improve sales performance, customer experience, and business decision-making.
 
-![Mind map of the Bright Coffee analysis project](charts/mind_map.png)
+---
 
-The project breaks into four phases: **data prep** (load, clean, feature engineer), **exploratory
-analysis** (descriptive stats, category/product/time breakdowns), **dashboard build** (KPIs,
-trend charts, pin-to-dashboard), and **deliverables** (insights write-up, slide-ready charts,
-this README).
+# 🔗 Live Dashboard
 
-## Suggested timeline
+Explore the interactive Bright Coffee sales dashboard:
 
-![Gantt chart of a 6-week project timeline](charts/gantt_chart.png)
+**[https://pixel-perfect-clone-19292.lovable.app](https://pixel-perfect-clone-19292.lovable.app)**
 
-This is an illustrative plan, not tied to real dates — adjust the weeks to your actual schedule.
+---
 
-## What the notebook does
+# 🎯 Project Objectives
 
-1. **Load** — reads the `;`-delimited CSV (comma-decimal `unit_price`, e.g. `3,1`) into a Spark DataFrame
-2. **Data quality checks** — null counts per column, duplicate `transaction_id` / duplicate row checks
-3. **Cleaning & feature engineering** — casts types, parses date/time, adds:
-   - `revenue` = `transaction_qty × unit_price` (not present in the raw data)
-   - `month`, `day_of_week`, `hour_of_day`, `is_weekend`
-4. **Descriptive statistics** — summary stats on quantity, price, revenue
-5. **Dashboard section** — one `display()` chart per cell, each pinnable to a Databricks Dashboard:
-   - Headline KPIs (total revenue, transactions, units sold, avg order value)
-   - Daily and monthly revenue trend
-   - Revenue by product category
-   - Top 10 products by revenue
-   - Revenue by hour of day (peak hours)
-   - Revenue by day of week
-   - Revenue by store location
-   - Order value distribution (histogram)
-6. **Static charts for a slide deck** — Matplotlib PNGs (monthly trend, category breakdown, peak hours) saved to `/tmp/` on the cluster driver
-7. **Auto-generated insights** — a short written summary (top category, top product, peak hour, best store, best month) with a few recommendations
-8. **Dashboard how-to** — steps for pinning the notebook's charts into a live Databricks Dashboard
+- Analyze coffee shop sales performance
+- Identify best-selling products
+- Understand customer purchasing patterns
+- Discover peak sales periods
+- Generate business recommendations
+- Practice real-world data analytics techniques
 
-## Setup
+---
 
-### 1. Upload the data
+# 📊 Dataset Overview
 
-Databricks now requires data to live in a **Unity Catalog Volume** (the legacy DBFS root /
-`/FileStore` path is disabled on most workspaces).
+The dataset includes information such as:
 
-1. In the left sidebar, go to **Catalog**.
-2. Pick or create a catalog → schema → **Volume**.
-3. Open the Volume and use **Upload to this volume** to add `Bright_Coffee_Shop_Sales.csv`.
-4. Note the full path, which will look like:
-   ```
-   /Volumes/<catalog>/<schema>/<volume>/Bright_Coffee_Shop_Sales.csv
-   ```
+- Order ID
+- Product Name
+- Product Category
+- Quantity Sold
+- Unit Price
+- Total Sales
+- Order Date
+- Order Time
+- Store Location
+- Payment Method
 
-### 2. Import the notebook
+---
 
-In Databricks: **Workspace → Import → File**, and select `BrightCoffee_EDA_Dashboard.py`.
+# 🔍 Exploratory Data Analysis
 
-### 3. Point the notebook at your data
+The project covers:
 
-At the top of the notebook there's a **`data_path`** widget. Click into it and paste the Volume
-path from step 1, then run the notebook top to bottom.
+- Data inspection
+- Missing value analysis
+- Duplicate detection
+- Data cleaning
+- Descriptive statistics
+- Sales trend analysis
+- Category analysis
+- Product performance analysis
 
-## Notes / known gotchas
+---
 
-- **Serverless compute**: the notebook does not call `.cache()`/`.persist()`, since explicit
-  caching isn't supported on serverless compute clusters. If you're running on a classic
-  (non-serverless) cluster, you can add `.cache()` back after the cleaning step for a speed-up.
-- **Widget values persist across runs**: if you change the default `data_path` in the code but
-  the widget already has an old value from a previous run, Databricks keeps the old value. Either
-  edit the widget box directly in the notebook UI, or clear it with
-  `dbutils.widgets.removeAll()` and re-run.
-- **Exporting charts for slides**: the Matplotlib PNGs are saved to `/tmp/` on the cluster driver,
-  which isn't directly downloadable from the UI. Copy them to a Volume first, e.g.:
-  ```python
-  dbutils.fs.cp("file:/tmp/monthly_revenue_trend.png", "/Volumes/<catalog>/<schema>/<volume>/charts/")
-  ```
-  then download from the Catalog file browser.
+# 📈 Visualizations
 
-## Building a live Dashboard
+This project includes visualizations such as:
 
-Every chart cell in Section 6 renders via `display()`. Hover over a chart's output and click
-**"+ Add to dashboard"** (or the "..." menu) to pin it — repeat for each chart, choosing the same
-dashboard each time. Once all tiles are pinned, open the dashboard from the notebook's sidebar,
-arrange the layout, and **Publish** (or **Schedule**) to share a live, refreshable dashboard.
+- Sales by Product
+- Sales by Category
+- Daily Sales Trends
+- Monthly Sales Trends
+- Peak Sales Hours
+- Revenue Distribution
+- Bar Charts
+- Line Charts
+- Pie Charts
+- Histograms
+
+---
+
+# 💡 Business Insights
+
+Examples of insights include:
+
+- Best-selling products
+- Highest revenue categories
+- Peak customer purchasing hours
+- Seasonal sales trends
+- Revenue contribution by category
+- Opportunities to increase sales
+
+---
+
+# 🛠 Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+
+---
+
+# 📂 Project Structure
+
+```
+Bright_Coffee_EDA/
+│
+├── data/
+├── notebook/
+├── images/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+# 🚀 Getting Started
+
+## Clone the repository
+
+```bash
+git clone https://github.com/williammoscow743-prog/Bright_Coffee_EDA.git
+```
+
+## Install dependencies
+
+```bash
+pip install pandas numpy matplotlib
+```
+
+## Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+---
+
+# 📊 Skills Demonstrated
+
+- Data Cleaning
+- Exploratory Data Analysis
+- Data Visualization
+- Business Analytics
+- Statistical Analysis
+- Python Programming
+- Business Storytelling
+
+---
+
+# 📸 Screenshots
+
+Include screenshots of:
+
+- Dataset Preview
+- Sales Dashboard
+- Product Analysis
+- Revenue Charts
+- Trend Analysis
+
+---
+
+# 🎯 Future Improvements
+
+- Interactive Power BI Dashboard
+- Predictive Sales Forecasting
+- SQL Database Integration
+- Streamlit Web Application
+- Machine Learning Sales Prediction
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project, I strengthened my skills in:
+
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Data visualization
+- Business intelligence
+- Insight generation
+- Python for data analytics
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**William Mathekuana**
+
+Aspiring Data Analyst | Software Developer | Graphic Designer
+
+GitHub: https://github.com/williammoscow743-prog
+
+---
+
+⭐ If you found this project interesting, consider giving it a star on GitHub.
