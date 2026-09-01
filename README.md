@@ -40,16 +40,17 @@ Locations: Astoria · Hell's Kitchen · Lower Manhattan
 
 | | File | Description |
 |---|---|---|
-| 📓 | `BrightCoffee_EDA_Dashboard.py` | Databricks notebook (source format) — import directly into a Databricks workspace |
+| 📓 | `BrightCoffee_EDA_Dashboard.ipynb` | Databricks notebook — import directly into a Databricks workspace |
 | 📄 | `Bright_Coffee_Shop_Sales.csv` | Raw source data |
-| 🧠 | `charts/mind_map.png` | Mind map of the project structure |
-| 🗓️ | `charts/gantt_chart.png` | Illustrative 6-week project timeline |
+| 📊 | `Bright_Coffee_Sales_Presentation.pptx.pptx` | Slide deck of the analysis findings |
+| 🧠 | `mind_map.png` | Mind map of the project structure |
+| 🗓️ | `gantt_chart.png` | Illustrative 6-week project timeline |
 
 ---
 
 ## 🧠 Project overview
 
-![Mind map of the Bright Coffee analysis project](charts/mind_map.png)
+![Mind map of the Bright Coffee analysis project](mind_map.png)
 
 The project breaks into four phases:
 
@@ -62,7 +63,7 @@ The project breaks into four phases:
 
 ## 🗓️ Suggested timeline
 
-![Gantt chart of a 6-week project timeline](charts/gantt_chart.png)
+![Gantt chart of a 6-week project timeline](gantt_chart.png)
 
 This is an illustrative plan, not tied to real dates — adjust the weeks to your actual schedule.
 
@@ -108,7 +109,7 @@ Databricks now requires data to live in a **Unity Catalog Volume** (the legacy D
 
 ### 2️⃣ Import the notebook
 
-In Databricks: **Workspace → Import → File**, and select `BrightCoffee_EDA_Dashboard.py`.
+In Databricks: **Workspace → Import → File**, and select `BrightCoffee_EDA_Dashboard.ipynb`.
 
 ### 3️⃣ Point the notebook at your data
 
