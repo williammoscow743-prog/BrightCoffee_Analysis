@@ -10,6 +10,8 @@ dashboard-ready charts plus a short auto-generated business summary.
 
 The flowchart shows each step from loading the raw data to the final outputs, including the decision points. The Graphviz source is in [`coffee.dot`](coffee.dot).
 
+The same flowchart is also on Miro: [Bright Coffee project flowchart (Miro)](https://miro.com/app/board/uXjVEMSmu6Q=/?share_link_id=296934609320).
+
 ---
 
 ## 📄 Project Description
