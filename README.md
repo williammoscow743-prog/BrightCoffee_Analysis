@@ -4,6 +4,10 @@ A Databricks notebook that cleans, explores, and visualizes the Bright Coffee Sh
 data (Jan–Jun 2023, ~149K transactions across 3 NYC store locations), and builds a set of
 dashboard-ready charts plus a short auto-generated business summary.
 
+## 📄 Project Description
+
+[Read the project description (PDF)](BrightCoffee_Project_Description.pdf)
+
 ## 📑 Contents
 
 - [🔗 Live dashboard](#-live-dashboard)
