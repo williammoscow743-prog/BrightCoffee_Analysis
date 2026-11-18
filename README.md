@@ -9,6 +9,9 @@ dashboard-ready charts plus a short auto-generated business summary.
 - [🔗 Live dashboard](#-live-dashboard)
 - [📁 Files](#-files)
 - [🧠 Project overview](#-project-overview)
+- [📈 Findings](#-findings)
+- [🛠️ Tools used](#️-tools-used)
+- [🔄 Process](#-process)
 - [🗓️ Suggested timeline](#️-suggested-timeline)
 - [⚙️ What the notebook does](#️-what-the-notebook-does)
 - [🚀 Setup](#-setup)
@@ -42,7 +45,7 @@ Locations: Astoria · Hell's Kitchen · Lower Manhattan
 |---|---|---|
 | 📓 | `BrightCoffee_EDA_Dashboard.ipynb` | Databricks notebook — import directly into a Databricks workspace |
 | 📄 | `Bright_Coffee_Shop_Sales.csv` | Raw source data |
-| 📊 | `Bright_Coffee_Sales_Presentation.pptx.pptx` | Slide deck of the analysis findings |
+| 📊 | `Bright_Coffee_Sales_Presentation.pptx` | Slide deck of the analysis findings |
 | 🧠 | `mind_map.png` | Mind map of the project structure |
 | 🗓️ | `gantt_chart.png` | Illustrative 6-week project timeline |
 
@@ -50,9 +53,14 @@ Locations: Astoria · Hell's Kitchen · Lower Manhattan
 
 ## 🧠 Project overview
 
+**Business question:** Bright Coffee Shop wants to know which products, stores, and times of day drive its revenue, so it can decide where to focus staffing, stock, and promotions.
+
+**Data:** 149,116 transactions from January to June 2023 across three stores (Astoria, Hell's Kitchen, Lower Manhattan).
+
+
 ![Mind map of the Bright Coffee analysis project](mind_map.png)
 
-The project breaks into four phases:
+The project followed four phases, in this order:
 
 - 🗂️ **Data prep** — load, clean, feature engineer
 - 🔍 **Exploratory analysis** — descriptive stats, category/product/time breakdowns
@@ -60,6 +68,43 @@ The project breaks into four phases:
 - 📦 **Deliverables** — insights write-up, slide-ready charts, this README
 
 ---
+
+## 📈 Findings
+
+Total revenue for the period was $698,812.33 across 214,470 items sold, an average transaction of $4.69.
+
+- **Coffee is the largest category** at $269,952.45. Barista Espresso is the top product at $91,406.20.
+- **10:00 is the peak hour**, with $88,673.39 in revenue, so staffing around that hour matters most.
+- **Hell's Kitchen earns the most** at $236,511.17, which makes it the benchmark for the other two stores.
+- **June 2023 was the strongest month** at $166,485.88.
+
+**Recommendations:** check staffing around 10:00, bundle or promote the weaker categories, find out what Hell's Kitchen does differently and test it elsewhere, and add previous years' data to confirm whether June's lead is seasonal.
+
+---
+
+## 🛠️ Tools used
+
+- **Databricks** (notebook, Unity Catalog Volumes, dashboards)
+- **PySpark** for cleaning, feature engineering, and aggregation
+- **Spark SQL** (temp view for SQL-based dashboard queries)
+- **pandas** and **Matplotlib** for the slide-ready charts
+- **Lovable** for the interactive dashboard
+- **Microsoft PowerPoint** for the presentation
+- **GitHub** for version control and documentation
+
+---
+
+## 🔄 Process
+
+1. **Load and check the data:** read the semicolon-delimited CSV, fix the comma decimal separator in `unit_price`, and check for nulls and duplicate transactions.
+2. **Clean and engineer features:** cast types, parse dates and times, and add revenue, month, weekday, and hour fields.
+3. **Explore:** run descriptive statistics, then break revenue down by month, category, product, hour, weekday, and store.
+4. **Build the dashboard:** pin each chart to a Databricks dashboard and build the Lovable dashboard from the same results.
+5. **Communicate:** write the key insights and recommendations in the notebook, then summarise them in the slide deck.
+
+---
+
+## 🧠 Project overview
 
 ## 🗓️ Suggested timeline
 
