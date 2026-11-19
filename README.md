@@ -61,7 +61,7 @@ Locations: Astoria · Hell's Kitchen · Lower Manhattan
 | 📄 | `Bright_Coffee_Shop_Sales.csv` | Raw source data |
 | 📊 | `Bright_Coffee_Sales_Presentation.pptx` | Slide deck of the analysis findings |
 | 🧠 | `mind_map.png` | Mind map of the project structure |
-| 🗓️ | `gantt_chart.png` | Project timeline, 25 Oct to 18 Nov 2026 |
+| 🗓️ | `gantt_chart.png` | Project timeline, 25 Aug to 17 Sep 2026 |
 
 ---
 
@@ -122,9 +122,9 @@ Total revenue for the period was $698,812.33 across 214,470 items sold, an avera
 
 ## 🗓️ Suggested timeline
 
-![Gantt chart of the project timeline, 25 Oct to 18 Nov 2026](gantt_chart.png)
+![Gantt chart of the project timeline, 25 Aug to 17 Sep 2026](gantt_chart.png)
 
-The project ran from 25 October to 18 November 2026. Phases are shown on working days only (18 working days in total). Each phase is listed with its start and end date.
+The project ran from 25 August to 17 September 2026 (about 3.5 weeks). Phases are shown on working days only (18 working days in total). Each phase is listed with its start and end date.
 
 ---
 
