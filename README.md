@@ -201,3 +201,7 @@ Every chart cell in Section 6 renders via `display()`. Hover over a chart's outp
 **"+ Add to dashboard"** (or the "..." menu) to pin it — repeat for each chart, choosing the same
 dashboard each time. Once all tiles are pinned, open the dashboard from the notebook's sidebar,
 arrange the layout, and **Publish** (or **Schedule**) to share a live, refreshable dashboard.
+
+## 📊 Dashboard (Canva)
+
+[View the Bright Coffee sales dashboard (PDF)](Bright_Coffee_Sales_Dashboard.pdf)
